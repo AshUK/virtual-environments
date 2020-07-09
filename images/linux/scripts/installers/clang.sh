@@ -51,7 +51,7 @@ done
 
 rm llvm.sh
 
-# Make Clang 9 default
-update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-9 100
-update-alternatives --install /usr/bin/clang clang /usr/bin/clang-9 100
-update-alternatives --install /usr/bin/clang-format clang-format /usr/bin/clang-format-9 100
+# Make Clang 10 default
+update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-10 100
+update-alternatives --install /usr/bin/clang clang /usr/bin/clang-10 100
+update-alternatives --install /usr/bin/clang-format clang-format /usr/bin/clang-format-10 100
