@@ -1,7 +1,7 @@
 #!/bin/bash
 ################################################################################
 ##  File:  clang.sh
-##  Desc:  Installs Clang compiler (versions: 6, 8, 9 and 10)
+##  Desc:  Installs Clang compiler (versions: 6, 8, 9, 10 and 11)
 ################################################################################
 
 # Source the helpers for use with the script
@@ -12,7 +12,7 @@ function InstallClang {
     version=$1
 
     echo "Installing clang-$version..."
-    if [[ $version =~ 10 ]]; then
+    if [[ $version =~ 9 ] || [ $version =~ 10 ] || [ $version =~ 11 ] ]; then
         ./llvm.sh $version
         apt-get install -y "clang-format-$version"
     else
@@ -42,6 +42,7 @@ versions=(
     "8"
     "9"
     "10"
+    "11"
 )
 
 for version in ${versions[*]}
